@@ -2,11 +2,12 @@
   "name": "goit-react-hw-02-feedback",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dreamkaman.github.io/goit-react-hw-01-components",
+  "homepage": "https://dreamkaman.github.io/goit-react-hw-02-feedback",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "modern-normalize": "^1.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-css-modules": "^4.7.11",
