@@ -1,9 +1,11 @@
-import Mytest from './components/Mytest';
+import Feedback from './components/Feedback';
+
+import styles from './styles/App.module.css';
 
 function App() {
   return (
-    <div>
-      <Mytest />
+    <div className={styles.container}>
+      <Feedback />
     </div>
   );
 }
