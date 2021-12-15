@@ -22,8 +22,8 @@ class Feedback extends Component {
     return Math.round((good / this.countTotalFeedback()) * 100) / 100;
   }
 
-  leaveFeedbackHandle = event => {
-    this.setState(prevstate => ({ [event.target.id]: prevstate[event.target.id] + 1 }));
+  leaveFeedbackHandle = name => {
+    this.setState(prevstate => ({ [name]: prevstate[name] + 1 }));
   };
 
   render() {
