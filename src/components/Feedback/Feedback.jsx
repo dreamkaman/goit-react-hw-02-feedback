@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Section from './Section';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
@@ -26,18 +28,17 @@ class Feedback extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const element =
-      this.countTotalFeedback() === 0 ? (
-        <Notification message="There is no feedback" />
-      ) : (
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={this.countTotalFeedback()}
-          percentage={this.countPositiveFeedbackPercentage()}
-        />
-      );
+    const element = !this.countTotalFeedback() ? (
+      <Notification message="There is no feedback" />
+    ) : (
+      <Statistics
+        good={good}
+        neutral={neutral}
+        bad={bad}
+        total={this.countTotalFeedback()}
+        percentage={this.countPositiveFeedbackPercentage()}
+      />
+    );
 
     return (
       <>
@@ -54,3 +55,9 @@ class Feedback extends Component {
 }
 
 export default Feedback;
+
+Feedback.propTypes = {
+  good: PropTypes.string,
+  neutral: PropTypes.string,
+  bad: PropTypes.string,
+};

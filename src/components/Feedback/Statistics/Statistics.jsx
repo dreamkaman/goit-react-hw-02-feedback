@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
+
 import styles from './Statistics.module.css';
 
-const Statistics = props => {
-  const { good, neutral, bad, percentage, total } = props;
+const Statistics = ({ good, neutral, bad, percentage, total }) => {
+  // const { good, neutral, bad, percentage, total } = props;
   return (
     <>
       <p>
@@ -29,3 +31,11 @@ const Statistics = props => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  good: PropTypes.string,
+  neutral: PropTypes.string,
+  bad: PropTypes.string,
+  percentage: PropTypes.number,
+  total: PropTypes.number,
+};
